@@ -4,7 +4,7 @@ A backend-focused authentication system built using Node.js, Express.js, MongoDB
 
 ## Live Demo
 
-https://code-vir10.onrender.com
+https://e-commerce-16sa.onrender.com
 
 ## Features
 
@@ -67,4 +67,4 @@ This project was developed to strengthen backend development skills, including:
 
 The application is deployed on Render and connected to MongoDB Atlas for database management.
 
-**Live URL:** https://code-vir10.onrender.com
+**Live URL:** https://e-commerce-16sa.onrender.com
