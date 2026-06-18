@@ -1,0 +1,134 @@
+<%- include('../partials/html-top') %>
+
+<head>
+  <style>
+    .login-container {
+      max-width: 420px;
+      margin: 80px auto;
+      padding: 32px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .login-container h1 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 28px;
+      color: #111827;
+    }
+
+    .login-container .input-group {
+      margin-bottom: 18px;
+    }
+
+    .login-container .input-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #374151;
+      font-weight: 500;
+    }
+
+    .login-container .input-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      background: #f9fafb;
+      font-size: 14px;
+    }
+
+    .login-container .error-box {
+      margin-bottom: 18px;
+      padding: 14px 16px;
+      border: 1px solid #f87171;
+      border-radius: 10px;
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .login-container .error-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .login-container .error-box a {
+      color: #b91c1c;
+      text-decoration: underline;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: #2563eb;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-container .footer {
+      text-align: center;
+      margin-top: 18px;
+      color: #6b7280;
+    }
+
+    .login-container .footer a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<%- include('../partials/header') %>
+<body>
+
+
+    <div class="login-container">
+        <h1>Login</h1>
+
+        <% if (error) { %>
+          <div class="error-box">
+            <p><%= error %></p>
+            <% if (errorType === 'not-signed-up') { %>
+              <p><a href="/signup">Sign up first</a></p>
+            <% } else { %>
+              <p>Please retry with the correct email and password.</p>
+            <% } %>
+          </div>
+        <% } %>
+
+        <form action="/login" method="POST">
+
+            <div class="input-group">
+                <label>Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                >
+            </div>
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <div class="footer">
+            <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<%- include('partials/html-top') %>
+
+    <head>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                background-color: #f4f4f4;
+            }
+
+            header {
+                background-color: #667eea;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .products-container {
+                width: 90%;
+                margin: 30px auto;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .product-card {
+                background: white;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                transition: 0.3s;
+            }
+
+            .product-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .product-card img {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+            }
+
+            .product-info {
+                padding: 15px;
+            }
+
+            .product-info h3 {
+                margin-bottom: 10px;
+            }
+
+            .price {
+                color: green;
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                background: #667eea;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background: #5563d6;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <%- include('partials/header') %>
+
+            <div class="products-container">
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?q=80&w=752&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Smart Watch">
+                    <div class="product-info">
+                        <h3>Smart Watch</h3>
+                        <p class="price">₹2,499</p>
+                        <button>Add to Cart</button>
+                        <button style="margin-top: 10px;">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZXRvb3RoJTIwc3BlYWtlcnN8ZW58MHx8MHx8fDA%3D" alt="Bluetooth Speaker">
+                    <div class="product-info">
+                        <h3>Bluetooth Speaker</h3>
+                        <p class="price">₹1,299</p>
+                        <button>Add to Cart</button>
+                        <button style="margin-top: 10px;">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1629429408209-1f912961dbd8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vdXNlfGVufDB8fDB8fHww" alt="Gaming Mouse">
+                    <div class="product-info">
+                        <h3>Gaming Mouse</h3>
+                        <p class="price">₹899</p>
+                        <button>Add to Cart</button>
+                        <button style="margin-top: 10px;">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1725075085043-79932bdbcde6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2lyZWxlc3MlMjBrZXlib2FyZHxlbnwwfHwwfHx8MA%3D%3D" alt="Wireless Keyboard">
+                    <div class="product-info">
+                        <h3>Wireless Keyboard</h3>
+                        <p class="price">₹1,499</p>
+                        <button>Add to Cart</button>
+                        <button style="margin-top: 10px;">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1713857297379-6fc26e70f581?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHdlYmNhbXxlbnwwfHwwfHx8MA%3D%3D" alt="Webcam HD">
+                    <div class="product-info">
+                        <h3>Webcam HD</h3>
+                        <p class="price">₹1,999</p>
+                        <button>Add to Cart</button>
+                        <button style="margin-top: 10px;">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww" alt="Monitor 24">
+                    <div class="product-info">
+                        <h3>Monitor 24</h3>
+                        <p class="price">₹1,999</p>
+                        <button>Add to Cart</button>
+                        <button style="margin-top: 10px;">Buy Now</button>
+                    </div>
+                </div>
+
+            </div>
+
+    </body>
+
+    </html>

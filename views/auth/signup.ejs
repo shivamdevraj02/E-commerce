@@ -1,0 +1,115 @@
+<%- include('../partials/html-top') %>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #333;
+        }
+
+        .signup-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 80px);
+            padding: 20px;
+        }
+
+        .signup-card {
+            width: 100%;
+            max-width: 420px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+            padding: 32px;
+        }
+
+        .signup-card h1 {
+            margin: 0 0 24px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .signup-form {
+            display: grid;
+            gap: 16px;
+        }
+
+        .signup-form label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d1d8e0;
+            border-radius: 8px;
+            font-size: 15px;
+            background: #f9fbff;
+        }
+
+        .signup-form button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #1f6feb;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .signup-form button:hover {
+            background: #1654d3;
+        }
+
+        .signup-footer {
+            margin: 20px 0 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .signup-footer a {
+            color: #1f6feb;
+            text-decoration: none;
+        }
+    </style>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <main class="signup-page">
+                <section class="signup-card">
+                    <h1>Create an Account</h1>
+                    <% if (typeof errorMessage !=='undefined' && errorMessage) { %>
+                        <div
+                            style="padding:14px;margin-bottom:16px;border-radius:10px;background:#ffeef0;color:#b42318;border:1px solid #f2dede;font-size:14px;">
+                            <%= errorMessage %>
+                        </div>
+                        <% } %>
+                            <form action="/signup" method="POST" class="signup-form">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" placeholder="Enter password"
+                                    required>
+
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword"
+                                    placeholder="Confirm password" required>
+
+                                <button type="submit">Sign Up</button>
+                            </form>
+                            <p class="signup-footer">Already have an account? <a href="/login">Log in</a></p>
+                </section>
+            </main>
+
+    </body>
+
+    </html>

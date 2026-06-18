@@ -1,0 +1,131 @@
+<%- include('partials/html-top') %>
+
+    <body>
+        <%- include('partials/header') %>
+
+            <!-- Hero Section -->
+            <section class="bg-gray-100 text-slate-900 py-20">
+                <main class="max-w-7xl mx-auto px-6">
+                    <h2 class="text-5xl font-bold mb-4">
+                        Welcome to our E-Commerce Store!
+                    </h2>
+                    <p class="text-lg mb-8 text-slate-700">
+                        Discover a wide range of products at unbeatable prices. Shop now and enjoy exclusive deals and
+                        discounts.
+                    </p>
+                    <a href="/products" style="color: black; background-color: rgba(240, 248, 255, 0.717);"
+                        class="inline-block bg-slate-900 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition duration-300 hover:bg-slate-800 hover:shadow-xl hover:-translate-y-0.5">
+                        Shop Now
+                    </a>
+                </main>
+            </section>
+
+            <!-- Featured Categories Section -->
+            <section class="max-w-7xl mx-auto px-6 py-16">
+                <h3 class="text-3xl font-bold mb-10 text-gray-800">Featured Categories</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="h-72 overflow-hidden bg-gray-100">
+                            <img src="https://images.pexels.com/photos/5560606/pexels-photo-5560606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Fashion category image"
+                                class="h-full w-full object-cover transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Fashion</h4>
+                            <p class="text-gray-600 mb-4">Latest trends and styles</p>
+                            <a href="/products?category=fashion"
+                                class="text-green-600 font-semibold hover:text-green-700">Browse →</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="h-72 overflow-hidden bg-gray-100">
+                            <img src="https://images.pexels.com/photos/3945682/pexels-photo-3945682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Electronics category image"
+                                class="h-full w-full object-cover transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Electronics</h4>
+                            <p class="text-gray-600 mb-4">Premium tech products</p>
+                            <a href="/products?category=electronics"
+                                class="text-green-600 font-semibold hover:text-green-700">Browse →</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="h-72 overflow-hidden bg-gray-100">
+                            <img src="https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Home and living category image"
+                                class="h-full w-full object-cover transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Home & Living</h4>
+                            <p class="text-gray-600 mb-4">Transform your space</p>
+                            <a href="/products?category=home"
+                                class="text-green-600 font-semibold hover:text-green-700">Browse →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Deals Section -->
+            <section class="bg-gray-100 py-16">
+                <main class="max-w-7xl mx-auto px-6">
+                    <h3 class="text-3xl font-bold mb-10 text-gray-800">Special Deals</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-lg p-8 shadow-md flex items-center">
+                            <div class="flex-1">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-2">Summer Sale</h4>
+                                <p class="text-gray-600 mb-4">Up to 50% off on selected items</p>
+                                <span class="text-green-600 font-semibold">Limited time offer</span>
+                            </div>
+                            <div class="text-5xl font-bold text-green-500">50%</div>
+                        </div>
+                        <div class="bg-white rounded-lg p-8 shadow-md flex items-center">
+                            <div class="flex-1">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-2">Free Shipping</h4>
+                                <p class="text-gray-600 mb-4">On orders over $50</p>
+                                <span class="text-green-600 font-semibold">Shop now</span>
+                            </div>
+                            <div class="text-5xl font-bold text-green-500">🚚</div>
+                        </div>
+                    </div>
+                </main>
+            </section>
+
+            <!-- Why Choose Us Section -->
+            <section class="max-w-7xl mx-auto px-6 py-16">
+                <h3 class="text-3xl font-bold mb-10 text-gray-800">Why Choose Us</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">✓</span>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Quality Products</h4>
+                        <p class="text-gray-600">Carefully selected items</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">💰</span>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Best Prices</h4>
+                        <p class="text-gray-600">Competitive pricing</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🚚</span>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Fast Delivery</h4>
+                        <p class="text-gray-600">Quick shipping</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🛡️</span>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Secure Payment</h4>
+                        <p class="text-gray-600">Safe transactions</p>
+                    </div>
+                </div>
+            </section>
+
+    </body>
+
+    </html>
