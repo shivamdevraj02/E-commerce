@@ -52,7 +52,7 @@ This project was developed to strengthen backend development skills, including:
 * MVC Project Structure
 * Deployment with Render
 
-## Future Enhancements
+## Future Enhancements:--
 
 * Password Hashing using bcrypt
 * Email Verification
